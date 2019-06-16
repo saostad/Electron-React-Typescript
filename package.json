@@ -79,8 +79,8 @@
     "@types/node": "^12.0.8",
     "@types/react": "^16.8.20",
     "@types/react-dom": "^16.8.4",
-    "awesome-typescript-loader": "^5.2.1",
     "electron": "5.0.4",
+    "electron-devtools-installer": "^2.2.4",
     "node-loader": "^0.6.0",
     "ts-loader": "^6.0.2",
     "typescript": "^3.5.2"

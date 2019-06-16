@@ -19,10 +19,9 @@ module.exports = [
     exclude: /(node_modules)/,
     loaders: [
       {
-        // loader: "awesome-typescript-loader",
         loader: "ts-loader",
         options: {
-          transpileOnly: true
+          transpileOnly: false
         }
       }
     ]
