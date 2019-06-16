@@ -15,15 +15,27 @@ module.exports = [
     }
   },
   {
-    test:  /\.(ts|tsx)$/,
-    exclude: /(node_modules|.webpack)/,
+    test: /\.(ts|tsx)$/,
+    exclude: /(node_modules)/,
     loaders: [
       {
+        // loader: "awesome-typescript-loader",
         loader: "ts-loader",
         options: {
           transpileOnly: true
         }
       }
     ]
+  },
+  {
+    test: /\.(scss|css)$/,
+    use: ["style-loader", "css-loader"]
+  },
+  {
+    test: /\.(jpg|png|svg|ico|icns)$/,
+    loader: "file-loader",
+    options: {
+      name: "[path][name].[ext]"
+    }
   }
 ];
