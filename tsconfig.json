@@ -2,14 +2,13 @@
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "jsx": "react",
-    "baseUrl": ".",
     "module": "commonjs",
     "moduleResolution": "node",
     "noImplicitAny": true,
     "noImplicitThis": true,
     "strictNullChecks": true,
     "sourceMap": true,
-    "target": "esnext"
+    "target": "es5"
   },
   "exclude": ["node_modules"]
 }

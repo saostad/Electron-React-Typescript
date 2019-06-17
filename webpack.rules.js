@@ -19,10 +19,7 @@ module.exports = [
     exclude: /(node_modules)/,
     loaders: [
       {
-        loader: "ts-loader",
-        options: {
-          transpileOnly: false
-        }
+        loader: "babel-loader"
       }
     ]
   },

@@ -60,15 +60,21 @@
     }
   },
   "dependencies": {
-    "css-loader": "^3.0.0",
     "electron-squirrel-startup": "^1.0.0",
     "file-loader": "^4.0.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-hot-loader": "^4.11.1",
-    "style-loader": "^0.23.1"
+    "react-hot-loader": "^4.11.1"
   },
   "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/node": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.3.3",
     "@electron-forge/cli": "^6.0.0-beta.39",
     "@electron-forge/maker-deb": "^6.0.0-beta.39",
     "@electron-forge/maker-rpm": "^6.0.0-beta.39",
@@ -79,9 +85,12 @@
     "@types/node": "^12.0.8",
     "@types/react": "^16.8.20",
     "@types/react-dom": "^16.8.4",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.0.0",
     "electron": "5.0.4",
     "electron-devtools-installer": "^2.2.4",
     "node-loader": "^0.6.0",
+    "style-loader": "^0.23.1",
     "ts-loader": "^6.0.2",
     "typescript": "^3.5.2"
   }
