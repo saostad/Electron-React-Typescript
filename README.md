@@ -1,7 +1,11 @@
 # Electron-React-Typescript
+
 Boilerplate for develop Electron application with React and Typescript
 
-## this project is using electron-forge and add typescript and react & react-dev-tools to it
+## this project is using
 
-### Next Steps:
-- add Hot reloading to react components
+- Electron-forge
+- React
+- Typescript
+- React-dev-tools to it
+- React Hot reloading

@@ -60,6 +60,7 @@
     }
   },
   "dependencies": {
+    "@babel/core": "^7.4.5",
     "@hot-loader/react-dom": "^16.8.6",
     "electron-squirrel-startup": "^1.0.0",
     "file-loader": "^4.0.0",
@@ -68,9 +69,6 @@
     "react-hot-loader": "^4.11.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.4.4",
-    "@babel/core": "^7.4.5",
-    "@babel/node": "^7.4.5",
     "@babel/plugin-proposal-class-properties": "^7.4.4",
     "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
     "@babel/preset-env": "^7.4.5",
