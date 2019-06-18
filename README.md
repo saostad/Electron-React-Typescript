@@ -2,10 +2,12 @@
 
 Boilerplate for develop Electron application with React and Typescript
 
-## this project is using
+## this project powered by
 
 - Electron-forge
 - React
 - Typescript
-- React-dev-tools to it
+- React-dev-tools
 - React Hot reloading
+
+and of course Webpack and Babel!
