@@ -60,6 +60,7 @@
     }
   },
   "dependencies": {
+    "@hot-loader/react-dom": "^16.8.6",
     "electron-squirrel-startup": "^1.0.0",
     "file-loader": "^4.0.0",
     "react": "^16.8.6",
