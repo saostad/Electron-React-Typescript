@@ -1,7 +1,7 @@
 import { app, BrowserWindow } from "electron";
 const {
   default: installExtension,
-  REACT_DEVELOPER_TOOLS
+  REACT_DEVELOPER_TOOLS,
 } = require("electron-devtools-installer");
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
@@ -18,7 +18,7 @@ const createWindow = () => {
   // Create the browser window.
   mainWindow = new BrowserWindow({
     width: 800,
-    height: 600
+    height: 600,
   });
 
   // and load the index.html of the app.
@@ -36,6 +36,12 @@ const createWindow = () => {
     mainWindow = null;
   });
 };
+
+function devToolsInstaller() {
+  installExtension(REACT_DEVELOPER_TOOLS)
+    .then((name: any) => console.log(`Added Extension:  ${name}`))
+    .catch((err: any) => console.log("An error occurred: ", err));
+}
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
@@ -62,10 +68,5 @@ app.on("activate", () => {
   }
 });
 
-function devToolsInstaller() {
-  installExtension(REACT_DEVELOPER_TOOLS)
-    .then((name: any) => console.log(`Added Extension:  ${name}`))
-    .catch((err: any) => console.log("An error occurred: ", err));
-}
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and import them here.
