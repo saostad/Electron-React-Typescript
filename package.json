@@ -65,8 +65,7 @@
     "electron-squirrel-startup": "^1.0.0",
     "file-loader": "^4.0.0",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-hot-loader": "^4.11.1"
+    "react-dom": "^16.8.6"
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.4.4",
@@ -100,6 +99,7 @@
     "eslint-plugin-react": "^7.13.0",
     "eslint-plugin-react-hooks": "^1.5.0",
     "node-loader": "^0.6.0",
+    "react-hot-loader": "^4.11.1",
     "style-loader": "^0.23.1",
     "ts-loader": "^6.0.3",
     "typescript": "^3.5.2"
