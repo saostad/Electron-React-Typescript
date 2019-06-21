@@ -1,8 +1,5 @@
 import { app, BrowserWindow } from "electron";
-const {
-  default: installExtension,
-  REACT_DEVELOPER_TOOLS,
-} = require("electron-devtools-installer");
+import installExtension, { REACT_DEVELOPER_TOOLS } from 'electron-devtools-installer';
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require("electron-squirrel-startup")) {
@@ -47,8 +44,8 @@ function devToolsInstaller() {
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.on("ready", () => {
-  devToolsInstaller();
   createWindow();
+  devToolsInstaller();
 });
 
 // Quit when all windows are closed.
