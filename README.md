@@ -17,3 +17,5 @@ and of course Webpack and Babel!
 - npm install
 - npm start
  
+## Next Steps:
+- add eslint for typescript linting
