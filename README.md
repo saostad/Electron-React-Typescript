@@ -9,6 +9,7 @@ Boilerplate for develop Electron application with React and Typescript
 - Typescript
 - React-dev-tools
 - React Hot reloading
+- Eslint for Typescript linting
 
 and of course Webpack and Babel!
 
@@ -18,4 +19,4 @@ and of course Webpack and Babel!
 - npm start
  
 ## Next Steps:
-- add eslint for typescript linting
+- ?
