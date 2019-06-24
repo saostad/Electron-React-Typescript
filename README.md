@@ -27,4 +27,4 @@ and of course Webpack and Babel!
 
 ## Next Steps:
 
-- ?
+- add babel-eslint
