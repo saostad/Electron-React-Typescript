@@ -1,5 +1,4 @@
 import { app, BrowserWindow } from "electron";
-import installExtension, { REACT_DEVELOPER_TOOLS } from 'electron-devtools-installer';
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require("electron-squirrel-startup")) {
@@ -16,6 +15,9 @@ const createWindow = () => {
   mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
+    webPreferences: {
+      nodeIntegration: true,
+    },
   });
 
   // and load the index.html of the app.
@@ -34,19 +36,10 @@ const createWindow = () => {
   });
 };
 
-function devToolsInstaller() {
-  installExtension(REACT_DEVELOPER_TOOLS)
-    .then((name: any) => console.log(`Added Extension:  ${name}`))
-    .catch((err: any) => console.log("An error occurred: ", err));
-}
-
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
-app.on("ready", () => {
-  createWindow();
-  devToolsInstaller();
-});
+app.on("ready", createWindow);
 
 // Quit when all windows are closed.
 app.on("window-all-closed", () => {

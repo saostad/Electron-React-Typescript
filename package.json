@@ -1,7 +1,7 @@
 {
-  "name": "electron-webpack",
-  "productName": "electron-webpack",
-  "version": "1.0.0",
+  "name": "electron-ts-react",
+  "productName": "electron-ts-react",
+  "version": "2.0.0",
   "description": "My Electron application description",
   "main": ".webpack/main",
   "scripts": {
@@ -21,7 +21,7 @@
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
-            "name": "electron_webpack"
+            "name": "electron-ts-react"
           }
         },
         {
@@ -80,8 +80,7 @@
     "@electron-forge/maker-zip": "^6.0.0-beta.45",
     "@electron-forge/plugin-webpack": "^6.0.0-beta.45",
     "@marshallofsound/webpack-asset-relocator-loader": "^0.5.0",
-    "@types/electron-devtools-installer": "^2.2.0",
-    "@types/node": "^12.12.3",
+    "@types/node": "^12.12.4",
     "@types/react": "^16.9.11",
     "@types/react-dom": "^16.9.3",
     "@typescript-eslint/eslint-plugin": "^2.6.0",
@@ -89,8 +88,7 @@
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.2.0",
-    "electron": "5.0.4",
-    "electron-devtools-installer": "^2.2.4",
+    "electron": "^7.0.0",
     "eslint": "^6.6.0",
     "eslint-config-prettier": "^6.5.0",
     "eslint-config-react-app": "^5.0.2",
