@@ -14,6 +14,12 @@ and of course Webpack and Babel!
 
 ## How to use it
 
+### Easy way:
+
+- `npm init electron-ts-starter [FOLDER_NAME] [VSCode]`
+
+### Alternative way:
+
 - git clone <Repository Address>
 - npm install
 - npm start

@@ -10,5 +10,5 @@
     "sourceMap": true,
     "target": "es5"
   },
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "dist", "out", ".webpack"]
 }

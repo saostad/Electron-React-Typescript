@@ -1,8 +1,13 @@
 {
-  "name": "electron-ts-react",
+  "name": "create-electron-ts-react",
   "productName": "electron-ts-react",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "My Electron application description",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saostad/Electron-React-Typescript.git"
+  },
+  "bin": "./setup.js",
   "main": ".webpack/main",
   "scripts": {
     "start": "electron-forge start",
