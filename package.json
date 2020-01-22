@@ -13,11 +13,16 @@
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
-    "publish": "electron-forge publish",
-    "lint": "echo \"No linting configured\""
+    "publishOnly": "electron-forge publish"
   },
-  "keywords": [],
-  "author": "Saeid",
+  "keywords": [
+    "Electron",
+    "Typescript",
+    "React",
+    "Starter",
+    "Boilerplate"
+  ],
+  "author": "Saeid Ostad",
   "license": "MIT",
   "config": {
     "forge": {
