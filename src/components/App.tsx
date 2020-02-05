@@ -6,7 +6,7 @@ import "./style.css";
 function App() {
   return (
     <div>
-      <h3>Electron App</h3>
+      <h3>Hello From Electron App</h3>
       <h4>Electron: {process.versions.electron}</h4>
       <h4>Chrome: {process.versions.chrome}</h4>
       <h4>Node: {process.versions.node}</h4>
