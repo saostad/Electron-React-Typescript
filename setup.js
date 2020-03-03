@@ -1,8 +1,6 @@
 #!/usr/bin/env node
 const util = require("util");
 const path = require("path");
-const unzipper = require("unzipper");
-const fetch = require("node-fetch");
 
 /** Steps:
  * 1- create folder
@@ -59,6 +57,8 @@ async function setup() {
     await runShellCmd(`git init && git add . && git commit -am "init commit"`);
     console.log(`new git repo initialized successfully!`);
 
+    const unzipper = require("unzipper");
+    const fetch = require("node-fetch");
     const reactDevToolsExtensionId = "fmkadmapgofadopljbjfkapdkoienihi";
     const res = await fetch(
       `https://clients2.google.com/service/update2/crx?response=redirect&prodversion=72.0&x=id%3D${reactDevToolsExtensionId}%26installsource%3Dondemand%26uc`,
