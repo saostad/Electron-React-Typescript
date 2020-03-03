@@ -1,12 +1,15 @@
 #!/usr/bin/env node
 const util = require("util");
 const path = require("path");
+const unzipper = require("unzipper");
+const fetch = require("node-fetch");
 
 /** Steps:
  * 1- create folder
  * 2- copy files to created folder
  * 3- run npm install
  * 4- run git init
+ * 5- install react dev tools chrome extension
  * 5- run vscode
  */
 
@@ -55,6 +58,18 @@ async function setup() {
 
     await runShellCmd(`git init && git add . && git commit -am "init commit"`);
     console.log(`new git repo initialized successfully!`);
+
+    const reactDevToolsExtensionId = "fmkadmapgofadopljbjfkapdkoienihi";
+    const res = await fetch(
+      `https://clients2.google.com/service/update2/crx?response=redirect&prodversion=72.0&x=id%3D${reactDevToolsExtensionId}%26installsource%3Dondemand%26uc`,
+    );
+
+    const buffer = await res.buffer();
+    const dir = await unzipper.Open.buffer(buffer, { crx: true });
+    await dir.extract({
+      path: path.join(process.cwd(), "lib", "react-dev-tools"),
+    });
+    console.log(`react dev tools extension downloaded successfully!`);
 
     if (runVsCode) {
       console.log(`starting vscode...`);
