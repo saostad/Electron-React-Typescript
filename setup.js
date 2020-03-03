@@ -59,7 +59,7 @@ async function setup() {
 
     console.log(`downloading chrome extension 'react dev tools'`);
     console.log(`installing required modules.`);
-    await runShellCmd(`git i -g unzipper node-fetch"`);
+    await runShellCmd(`npm i -g unzipper node-fetch"`);
     const unzipper = require("unzipper");
     const fetch = require("node-fetch");
     const reactDevToolsExtensionId = "fmkadmapgofadopljbjfkapdkoienihi";
@@ -73,7 +73,7 @@ async function setup() {
       path: path.join(process.cwd(), "lib", "react-dev-tools"),
     });
     console.log(`cleaning up...`);
-    await runShellCmd(`git un -g unzipper node-fetch"`);
+    await runShellCmd(`npm un -g unzipper node-fetch"`);
     console.log(`react dev tools extension downloaded successfully!`);
 
     if (runVsCode) {
