@@ -1,13 +1,13 @@
 {
   "name": "create-electron-ts-react",
   "productName": "electron-ts-react",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "description": "Electron Typescript React Boilerplate / Starter",
   "repository": {
     "type": "git",
     "url": "https://github.com/saostad/Electron-React-Typescript.git"
   },
-  "bin": "./setup.js",
+  "bin": "./lib/setup.js",
   "main": ".webpack/main",
   "scripts": {
     "start": "electron-forge start",
@@ -74,8 +74,10 @@
     "@hot-loader/react-dom": "^16.12.0",
     "electron-squirrel-startup": "^1.0.0",
     "file-loader": "^5.1.0",
+    "node-fetch": "^2.6.0",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
+    "unzipper": "^0.10.10",
     "url-loader": "^3.0.0"
   },
   "devDependencies": {
