@@ -17,7 +17,9 @@ and of course Webpack and Babel!
 
 ### Easy way:
 
-- `npm init electron-ts-starter [FOLDER_NAME] [VSCode]`
+- `npm init electron-ts-react FOLDER_NAME VSCode`
+- `cd FOLDER_NAME`
+- `npm start`
 
 ### Alternative way:
 
