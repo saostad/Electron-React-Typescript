@@ -23,7 +23,7 @@ and of course Webpack and Babel!
 
 ### Alternative way:
 
-- git clone <Repository Address>
+- git clone https://github.com/saostad/Electron-React-Typescript.git
 - npm install
 - npm start
 
