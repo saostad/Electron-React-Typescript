@@ -1,5 +1,9 @@
 import { app, BrowserWindow } from "electron";
 import path from "path";
+import "regenerator-runtime/runtime.js";
+const {
+  reactDevToolsDownloader,
+} = require("../../lib/react-dev-tools-downloader");
 
 declare global {
   const MAIN_WINDOW_WEBPACK_ENTRY: string;
@@ -21,29 +25,29 @@ let mainWindow: null | BrowserWindow;
 
 const createWindow = () => {
   /**add chrome dev tools */
-  addReactDevTools();
+  addReactDevTools().then(result => {
+    // Create the browser window.
+    mainWindow = new BrowserWindow({
+      width: 800,
+      height: 600,
+      webPreferences: {
+        nodeIntegration: true,
+      },
+    });
 
-  // Create the browser window.
-  mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
-    webPreferences: {
-      nodeIntegration: true,
-    },
-  });
+    // and load the index.html of the app.
+    mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY);
 
-  // and load the index.html of the app.
-  mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY);
+    // Open the DevTools.
+    mainWindow.webContents.openDevTools();
 
-  // Open the DevTools.
-  mainWindow.webContents.openDevTools();
-
-  // Emitted when the window is closed.
-  mainWindow.on("closed", () => {
-    // Dereference the window object, usually you would store windows
-    // in an array if your app supports multi windows, this is the time
-    // when you should delete the corresponding element.
-    mainWindow = null;
+    // Emitted when the window is closed.
+    mainWindow.on("closed", () => {
+      // Dereference the window object, usually you would store windows
+      // in an array if your app supports multi windows, this is the time
+      // when you should delete the corresponding element.
+      mainWindow = null;
+    });
   });
 };
 
@@ -69,9 +73,15 @@ app.on("activate", () => {
   }
 });
 
-function addReactDevTools() {
-  const devToolsModule = path.join(process.cwd(), "lib", "react-dev-tools");
-  BrowserWindow.addDevToolsExtension(devToolsModule);
+async function addReactDevTools() {
+  try {
+    const devToolsModuleFolder = await reactDevToolsDownloader();
+    BrowserWindow.addDevToolsExtension(
+      path.join(process.cwd(), "lib", "react-dev-tools"),
+    );
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 // In this file you can include the rest of your app's specific main process
