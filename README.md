@@ -4,17 +4,9 @@ Boilerplate for develop Electron application with React and Typescript
 
 ## How to use it
 
-### Easy way:
-
 - `npm init electron-ts-react FOLDER_NAME VSCode`
 - `cd FOLDER_NAME`
 - `npm start`
-
-### Alternative way:
-
-- git clone https://github.com/saostad/Electron-React-Typescript.git
-- npm install
-- npm start
 
 ## Integrate in VSCode
 

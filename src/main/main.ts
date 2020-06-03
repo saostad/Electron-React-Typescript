@@ -1,4 +1,4 @@
-import { app, BrowserWindow } from "electron";
+import { app, BrowserWindow, Session } from "electron";
 import path from "path";
 
 declare global {
@@ -16,9 +16,6 @@ if (require("electron-squirrel-startup")) {
 let mainWindow: null | BrowserWindow;
 
 const createWindow = () => {
-  /**add chrome dev tools */
-  addReactDevTools();
-
   // Create the browser window.
   mainWindow = new BrowserWindow({
     width: 800,
@@ -27,6 +24,12 @@ const createWindow = () => {
       nodeIntegration: true,
     },
   });
+
+  /** Manage browser sessions, cookies, cache, proxy settings, etc */
+  const ses = mainWindow.webContents.session;
+
+  /**add chrome dev tools */
+  addReactDevTools(ses);
 
   // and load the index.html of the app.
   mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY);
@@ -65,9 +68,9 @@ app.on("activate", () => {
   }
 });
 
-function addReactDevTools() {
-  const devToolsModule = path.join(process.cwd(), "lib", "react-dev-tools");
-  BrowserWindow.addDevToolsExtension(devToolsModule);
+function addReactDevTools(ses: Session) {
+  const devToolsModulePath = path.join(process.cwd(), "lib", "react-dev-tools");
+  ses.loadExtension(devToolsModulePath);
 }
 
 // In this file you can include the rest of your app's specific main process

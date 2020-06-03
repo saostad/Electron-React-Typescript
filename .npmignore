@@ -3,3 +3,4 @@
 .webpack
 out
 .vscode
+lib/react-dev-tools
