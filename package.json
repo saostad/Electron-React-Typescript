@@ -1,7 +1,7 @@
 {
   "name": "create-electron-ts-react",
   "productName": "electron-ts-react",
-  "version": "3.0.8",
+  "version": "3.1.0",
   "description": "Electron Typescript React Boilerplate / Starter",
   "repository": {
     "type": "git",
@@ -71,6 +71,7 @@
   },
   "dependencies": {
     "@babel/core": "^7.10.2",
+    "@babel/runtime": "^7.10.2",
     "@hot-loader/react-dom": "^16.13.0",
     "electron-squirrel-startup": "^1.0.0",
     "file-loader": "^6.0.0",
@@ -83,6 +84,7 @@
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.10.1",
     "@babel/plugin-proposal-object-rest-spread": "^7.10.1",
+    "@babel/plugin-transform-runtime": "^7.10.1",
     "@babel/preset-env": "^7.10.2",
     "@babel/preset-react": "^7.10.1",
     "@babel/preset-typescript": "^7.10.1",
