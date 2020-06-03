@@ -5,10 +5,6 @@ declare global {
   const MAIN_WINDOW_WEBPACK_ENTRY: string;
 }
 
-// It will change to be "true" in Electron 9.
-// For more information please check https://github.com/electron/electron/issues/18397
-app.allowRendererProcessReuse = true;
-
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require("electron-squirrel-startup")) {
   // eslint-disable-line global-require

@@ -2,17 +2,6 @@
 
 Boilerplate for develop Electron application with React and Typescript
 
-## this project powered by
-
-- Electron-forge
-- React
-- Typescript
-- React Hot reloading
-- React-dev-tools
-- Eslint for Typescript linting
-
-and of course Webpack and Babel!
-
 ## How to use it
 
 ### Easy way:
@@ -33,6 +22,13 @@ and of course Webpack and Babel!
 
   `"eslint.validate": [ "javascript", "javascriptreact", { "language": "typescript", "autoFix": true }, { "language": "typescriptreact", "autoFix": true }]`
 
-## Next Steps:
+## this project powered by
 
-- add babel-eslint
+- Electron-forge
+- React
+- Typescript
+- React Hot reloading
+- React-dev-tools
+- Eslint for Typescript linting
+
+and of course Webpack and Babel!
