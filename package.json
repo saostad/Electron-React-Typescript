@@ -1,7 +1,7 @@
 {
   "name": "create-electron-ts-react",
   "productName": "electron-ts-react",
-  "version": "3.1.3",
+  "version": "3.1.4",
   "description": "Electron Typescript React Boilerplate / Starter",
   "repository": {
     "type": "git",
@@ -117,6 +117,7 @@
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "^4.0.4",
     "node-loader": "^0.6.0",
+    "npm-run-all": "^4.1.5",
     "react-hot-loader": "^4.12.21",
     "style-loader": "^1.2.1",
     "ts-loader": "^7.0.5",
