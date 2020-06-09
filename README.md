@@ -22,5 +22,5 @@ Boilerplate for develop Electron application with React and Typescript
 - React Hot reloading
 - React-dev-tools
 - Eslint for Typescript linting
-
-and of course Webpack and Babel!
+- Webpack
+- Babel

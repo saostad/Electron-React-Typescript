@@ -1,7 +1,7 @@
 {
   "name": "create-electron-ts-react",
   "productName": "electron-ts-react",
-  "version": "3.1.2-beta",
+  "version": "3.1.3",
   "description": "Electron Typescript React Boilerplate / Starter",
   "repository": {
     "type": "git",
@@ -10,17 +10,20 @@
   "bin": "./lib/setup.js",
   "main": ".webpack/main",
   "scripts": {
+    "tag": "node ./config/tag.js",
+    "gen-changelog": "auto-changelog && git add CHANGELOG.md && git commit -m \"doc: change log\"",
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
-    "publishOnly": "electron-forge publish"
+    "publishOnly": "electron-forge publish",
+    "postpublish": "npm-run-all -s tag gen-changelog"
   },
   "keywords": [
-    "Electron",
-    "Typescript",
-    "React",
-    "Starter",
-    "Boilerplate"
+    "electron",
+    "typescript",
+    "react",
+    "starter",
+    "boilerplate"
   ],
   "author": "Saeid Ostad",
   "license": "MIT",
@@ -100,6 +103,7 @@
     "@types/react-dom": "^16.9.8",
     "@typescript-eslint/eslint-plugin": "^3.2.0",
     "@typescript-eslint/parser": "^3.2.0",
+    "auto-changelog": "^2.0.0",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
     "css-loader": "^3.5.3",
