@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v3.1.6](https://github.com/saostad/Electron-React-Typescript/compare/v3.1.5...v3.1.6)
+
+> 10 July 2020
+
+- package: updated [`2d5b51e`](https://github.com/saostad/Electron-React-Typescript/commit/2d5b51e379fd36db58275b3e8f4737f147011f63)
+- doc: change log [`926b5d2`](https://github.com/saostad/Electron-React-Typescript/commit/926b5d2cb977b64b0b057ae8c56fee6df804654e)
+
 #### [v3.1.5](https://github.com/saostad/Electron-React-Typescript/compare/v3.1.4...v3.1.5)
 
 > 15 June 2020
