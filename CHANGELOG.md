@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v3.1.12-beta02](https://github.com/saostad/Electron-React-Typescript/compare/v3.1.12-beta01...v3.1.12-beta02)
+
+> 27 April 2021
+
+- pkg: use electron-devtools-installer to download dev tools [`6afacf2`](https://github.com/saostad/Electron-React-Typescript/commit/6afacf2a3cbdce476b0698c0f1d2813a2d1edbe2)
+- doc: change log [`a03e27f`](https://github.com/saostad/Electron-React-Typescript/commit/a03e27f1aee65b71f5216d2f720f57fde83a9966)
+
 #### [v3.1.12-beta01](https://github.com/saostad/Electron-React-Typescript/compare/v3.1.11...v3.1.12-beta01)
 
 > 27 April 2021
