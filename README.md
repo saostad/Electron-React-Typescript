@@ -20,11 +20,7 @@ Boilerplate for develop Electron application with React and Typescript
 - React
 - Typescript
 - React Hot reloading
-- React-dev-tools
+- [React-dev-tools](https://github.com/MarshallOfSound/electron-devtools-installer)
 - Eslint for Typescript linting
 - Webpack
 - Babel
-
-## TODO
-
-- [ ] use new version react dev tools chrome extension (it needs to extract crx v3 files)

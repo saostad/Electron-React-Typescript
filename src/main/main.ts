@@ -1,5 +1,7 @@
-import { app, BrowserWindow, Session } from "electron";
-import path from "path";
+import { app, BrowserWindow } from "electron";
+import installExtension, {
+  REACT_DEVELOPER_TOOLS,
+} from "electron-devtools-installer";
 
 declare global {
   const MAIN_WINDOW_WEBPACK_ENTRY: string;
@@ -10,6 +12,15 @@ if (require("electron-squirrel-startup")) {
   // eslint-disable-line global-require
   app.quit();
 }
+
+app.whenReady().then(() => {
+  installExtension(REACT_DEVELOPER_TOOLS, {
+    loadExtensionOptions: { allowFileAccess: true },
+    forceDownload: true,
+  })
+    .then((name) => console.log(`Added Extension:  ${name}`))
+    .catch((err) => console.log("An error occurred: ", err));
+});
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -25,12 +36,6 @@ const createWindow = () => {
       contextIsolation: false,
     },
   });
-
-  /** Manage browser sessions, cookies, cache, proxy settings, etc */
-  const ses = mainWindow.webContents.session;
-
-  /**add chrome dev tools */
-  addReactDevTools(ses);
 
   // and load the index.html of the app.
   mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY);
@@ -68,11 +73,6 @@ app.on("activate", () => {
     createWindow();
   }
 });
-
-function addReactDevTools(ses: Session) {
-  const devToolsModulePath = path.join(process.cwd(), "lib", "react-dev-tools");
-  ses.loadExtension(devToolsModulePath);
-}
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and import them here.
