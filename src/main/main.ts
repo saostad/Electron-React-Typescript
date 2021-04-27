@@ -16,7 +16,7 @@ if (require("electron-squirrel-startup")) {
 app.whenReady().then(() => {
   installExtension(REACT_DEVELOPER_TOOLS, {
     loadExtensionOptions: { allowFileAccess: true },
-    forceDownload: true,
+    forceDownload: false,
   })
     .then((name) => console.log(`Added Extension:  ${name}`))
     .catch((err) => console.log("An error occurred: ", err));

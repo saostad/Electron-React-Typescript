@@ -7,7 +7,6 @@ const path = require("path");
  * 2- copy files to created folder
  * 3- run npm install
  * 4- run git init
- * 5- install react dev tools chrome extension
  * 5- run vscode
  */
 
