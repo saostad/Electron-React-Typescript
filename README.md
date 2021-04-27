@@ -24,3 +24,7 @@ Boilerplate for develop Electron application with React and Typescript
 - Eslint for Typescript linting
 - Webpack
 - Babel
+
+## TODO
+
+- [ ] use new version react dev tools chrome extension (it needs to extract crx v3 files)
