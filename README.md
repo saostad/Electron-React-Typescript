@@ -14,7 +14,7 @@ Boilerplate for develop Electron application with React and Typescript
 
   `"eslint.validate": [ "javascript", "javascriptreact", { "language": "typescript", "autoFix": true }, { "language": "typescriptreact", "autoFix": true }]`
 
-## this project powered by
+## This project powered by
 
 - Electron-forge
 - React
