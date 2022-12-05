@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v3.1.16](https://github.com/saostad/Electron-React-Typescript/compare/v3.1.15...v3.1.16)
+
+> 5 December 2022
+
+- pkg: updated [`dbc275c`](https://github.com/saostad/Electron-React-Typescript/commit/dbc275c051e1769759cf4fab0981aea3ecead27d)
+- pkg: updated [`6b3e1c1`](https://github.com/saostad/Electron-React-Typescript/commit/6b3e1c112b2ac3c9cff8558575f7f86a8d4a6553)
+- doc: change log [`1965057`](https://github.com/saostad/Electron-React-Typescript/commit/1965057e763a061b0292c4aedf6bdff69dbf1574)
+
 #### [v3.1.15](https://github.com/saostad/Electron-React-Typescript/compare/v3.1.14...v3.1.15)
 
 > 24 October 2022
